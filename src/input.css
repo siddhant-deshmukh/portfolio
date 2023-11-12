@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-y {
+  background-color: #FECD45;
+}
+.text-y {
+  color: #FECD45;
+}
+.bg-b {
+  background-color: #2568FB;
+}
+.text-b {
+  color: #0c53eb  ;
+}
+.border-color-b {
+  border-color: #2568FB;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+
+.temp-hidden {
+  opacity: 0;
+  transition: all 1s;
+  /* filter: blur(5px); */
+  transform: translateX(-100%);
+}
+.show {
+  opacity: 1;
+  transition: all 2s;
+  transform: translateX(0);
+}
+
+.temp-hide-nav {
+  opacity: 0;
+  transition: all 1s;
+  /* filter: blur(5px); */
+  transform: translateY(-100%);
+}
+.show-nav {
+  opacity: 1;
+  transition: all 2s;
+  transform: translateY(0);
+}
