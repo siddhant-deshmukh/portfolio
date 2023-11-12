@@ -153,3 +153,42 @@ const navObserver = new IntersectionObserver((entries) => {
 
 const projectSection = document.querySelector('#temp-nav-bar')
 navObserver.observe(projectSection)
+
+
+// *--------------------------------------------------------------------------------------------------------------------------
+
+var cube = document.querySelector('.cube');
+// var radioGroup = document.querySelector('.radio-group');
+var currentClass = '';
+
+// function changeSide() {
+//   var checkedRadio = radioGroup.querySelector(':checked');
+//   var showClass = 'show-' + checkedRadio.value;
+//   if ( currentClass ) {
+//     cube.classList.remove( currentClass );
+//   }
+//   cube.classList.add( showClass );
+//   currentClass = showClass;
+// }
+// // set initial side
+// changeSide();
+
+const sides = ['front', 'bottom',  'back',  'right', 'left', 'top']
+var index = 0
+setInterval(() => {
+  console.log(sides[index], index)
+  var showClass = 'show-' + sides[index];
+
+  if (currentClass) {
+    cube.classList.remove(currentClass);
+  }
+  cube.classList.add(showClass);
+  currentClass = showClass;
+
+  index += 1
+  if (index > 5) {
+    index = 0
+  }
+}, 2000)
+// radioGroup.addEventListener( 'change', changeSide );
+
