@@ -33,11 +33,11 @@
     <!-- *Section         Hero  -->
     <section id="hero-section" class="relative  flex flex-col h-[100vh] w-full">
       <nav id="temp-nav-bar"
-        class="w-full fixed top-0 left-0 bg-base shadow-md transition-all temp-hide-nav duration-500 opacity-0 flex px-10 py-7 z-50">
-        <div class="text-secondary font-bold border-secondary border-2 rounded-full text-5xl px-5 py-2">
+        class="w-full fixed top-0 left-0 bg-base shadow-md transition-all temp-hide-nav duration-500 opacity-0 flex py-3 px-5  xl:px-10 xl:py-5 z-50">
+        <div class="text-secondary font-bold border-secondary border-2 rounded-full text-2xl px-3 py-1 xl:text-5xl xl:px-5 xl:py-2">
           S
         </div>
-        <div class="flex space-x-7 ml-auto items-center text-xl font-medium">
+        <div class="flex space-x-7 ml-auto items-center text-lg xl:text-xl font-medium">
           <a href="/#about-me-section">
             About
           </a>
@@ -47,7 +47,7 @@
           <a href="/#contact-me-section">
             Contact Me
           </a>
-          <a href="/#" class="p-3 border-2 border-secondary text-secondary">
+          <a href="/#" class="p-1.5 xl:p-3 border-2 border-secondary text-secondary">
             Resume
           </a>
         </div>
@@ -61,7 +61,7 @@
 
       <div class="flex  items-center  justify-start text-white w-full xl:w-fit xl:mx-auto space-x-10  h-full">
         <div
-          class="z-20  mr-auto  w-full  xl:h-fit xl:w-fit xl:mr-0 temp-hiddenp-10 overflow-visible  ml-10xl:ml-0 max-w-[800px] ">
+          class="z-20  mr-auto  w-full  xl:h-fit xl:w-fit xl:mr-0 temp-hiddenp-10 overflow-visible  ml-10 xl:ml-0 max-w-[800px] ">
           <h5 class="text-xl text-secondary my-10 ml-3">Full Stack developer</h5>
           <h1 class="text-8xl font-semibold w-fit min-w-fit whitespace-nowrap text-gray-200">Siddhant Deshmukh</h1>
           <!-- <h1 class="text-9xl font-semibold w-fit text-gray-300"></h1> -->
@@ -101,12 +101,12 @@
     <!-- *Section         About Me                    -->
     <section id="about-me-section" class="relative min-h-[80vh] h-fit py-32 w-full">
       <!-- <img class="absolute right-[5%] z-0 bottom-[10%] border-secondary2 border aspect-square h-[75%]" src="./src/imgs/avatar.png"/> -->
-      <div class="flex mb-10 flex-col items-start pl-[10%] space-y-20 justify-center w-full h-full">
-        <div class="w-full  flex items-center space-x-36 temp-hidden h-fit">
-          <div class="w-auto bg-opacity-30 max-w-[800px] ">
+      <div class="flex mb-10 flex-col items-start px-10 xl:px-[10%] space-y-20 justify-center w-full h-full">
+        <div class="w-full  flex items-center space-x-10 lg:space-x-36 temp-hidden h-fit">
+          <div class="w-full md:w-[70%] lg:w-auto  bg-opacity-30 lg:max-w-[800px] ">
             <h2 class="text-2xl lg:text-4xl font-bold">About Me</h2>
 
-            <p class="text-gray-200 text-xl">
+            <p class="text-gray-200 text-sm lg:text-xl">
               <br />
               Hello, I'm Siddhant Deshmukh, a recent graduate from 2023. I started software developement in second year
               of
@@ -120,63 +120,63 @@
               environments and relish challenges that push my boundaries.
             </p>
           </div>
-          <div class="max-h-[600px]">
+          <div class="w-[0%] hidden md:block md:w-[30%] lg:w-auto mx-0 overflow-hidden lg:max-h-[600px]">
             Image by
             <a
               href="https://www.freepik.com/free-vector/antigravity-technology-with-elements_4265511.htm#query=3d%20computer&position=1&from_view=search&track=ais">Freepik</a>
-            <img class="h-[600px]" src="./src/imgs/style/desktop.jpg" />
+            <img class="h-full w-full object-fill  lg:h-auto" src="./src/imgs/style/desktop.jpg" />
           </div>
         </div>
 
-        <div class="">
+        <div class="w-full">
           <h2 class="text-2xl lg:text-4xl font-bold">Skills</h2>
-          <ul class="flex w-full justify-start mt-5">
+          <ul class="grid grid-cols-4 place-items-center sm:flex w-full justify-start mt-5 flex-wrap">
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/react.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/nodejs.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/mongodb.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/postgresql.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/go.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/python.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/firebase.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/docker.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/kubernetes.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/git.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/aws.svg" />
             </li>
             <li>
-              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
                 src="./src/imgs/google-cloud.svg" />
             </li>
           </ul>
@@ -187,7 +187,7 @@
 
 
     <!-- *Section         Projects                    -->
-    <section id="projects-section" class="p-20">
+    <section id="projects-section" class="p-10 md:p-20">
       <h1 class="text-4xl font-bold text-center">
         <span>
           Projects
@@ -195,7 +195,7 @@
         <div class="border-2 w-52 max-w-full mx-auto mt-2"></div>
       </h1>
 
-      <ul id="projects-list" class="grid grid-cols-2 place-content-center place-items-center mt-10 max-w-7xl mx-auto w-full gap-10">
+      <ul id="projects-list" class="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center mt-10 max-w-7xl mx-auto w-full gap-10">
         <div class="hidden relative max-w-xl w-auto aspect-[0.9] max-h-[80vh] overflow-hidden">
           <div class="flex flex-col border border-secondary2 w-full h-full rounded-lg shadow-md">
             <!-- hover:scale-105 transition duration-150 ease-in-out -->

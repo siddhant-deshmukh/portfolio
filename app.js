@@ -65,23 +65,24 @@ const projects = [
 // ${(project.img_url)?project.img_url:'./src/imgs/default.png'}
 // ${project.description.split(".").slice(0,-1).map((line)=>`<li class="pl-1">&#x2022; ${line}</li>`).join(" ")}
 const projectsComponents = projects.map((project) => {
-  return `<div class="relative max-w-xl w-auto aspect-[0.9] max-h-[80vh] overflow-hidden">
+  return `<div class="relative max-w-xl w-auto aspect-[0.9] min-h-fit max-h-[80vh] overflow-hidden">
     <div class="flex flex-col border border-primary w-full h-full  shadow-md">
       <!-- hover:scale-105 transition duration-150 ease-in-out -->
-      <div class="absolute flex bottom-0 left-0 text-sm text-base2 space-x-1">
-        ${project.tech_used.slice(0, 3).map((tech) => `<span class="bg-secondary text-base2 font-semibold text-sm py-0.5 px-1">${tech}</span>`).join(" ")}
+      <div class="absolute flex  z-30 bottom-0 left-0 text-sm text-base2 space-x-1">
+        ${project.tech_used.slice(0, 3).map((tech) => `<span class="bg-secondary text-base2 font-semibold text-xs xl:text-sm py-0.5 px-1">${tech}</span>`).join(" ")}
       </div>
-      <div class="relative overflow-hidden w-full h-[60%] bg-white">
-        <img class="w-full " src=${(project.img_url) ? project.img_url : './src/imgs/default.png'} />
+      <div class="relative overflow-hidden w-full bg-white">
+        <img class="w-full aspect-[1.4]" src=${(project.img_url) ? project.img_url : './src/imgs/default.png'} />
       </div>
-      <div class="p-3 h-[40%] text-left">
+      <div class="px-5 pt-5 pb-10 text-left min-h-fit">
+        
         <div class="flex w-full justify-between items-center">
           <h1 class="text-xl text-gray-200 truncate ... overflow-hidden font-bold">${project.title}</h1>
           <a href=${project.github} target="_blank">
             <img class="w-9 h-9  rounded-full" src="./src/imgs/github.svg" />
           </a>
         </div>
-        <ul class="space-y-1 text-slate-300 min-h-[30px]">
+        <ul class=" space-y-1 text-slate-300 min-h-[30px]">
           ${project.description.split(".").slice(0, -1).map((line) => `<li class="pl-1 whitespace-normal">&#x2022; ${line}</li>`).join(" ")}
         </ul>
       </div>
