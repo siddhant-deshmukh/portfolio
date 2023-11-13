@@ -157,38 +157,96 @@ navObserver.observe(projectSection)
 
 // *--------------------------------------------------------------------------------------------------------------------------
 
+var heroSection = document.querySelector('#hero-section')
+
+function resizeImg(){
+  let heroSecSize = heroSection?.getBoundingClientRect()
+  if(heroSecSize){
+    const { width, height } = heroSecSize
+  
+    // console.log("Here")
+    if(width > 1580){
+      // console.log("here")
+      document.documentElement.style.setProperty("--three-d-cube-size","650px")
+    } else if(width > 1280) {
+      // console.log(width, (width - 800 - 100) + "px")
+      document.documentElement.style.setProperty("--three-d-cube-size", (width - 800 - 100) + "px")
+    } else {
+      document.documentElement.style.setProperty("--three-d-cube-size", (width/2) + "px")
+    }
+  }
+}
+resizeImg()
+// if(heroSecSize){
+//   const { width, height } = heroSecSize
+
+//   console.log("Here")
+//   if(width > 1580){
+//     console.log("here")
+//     document.documentElement.style.setProperty("--three-d-cube-size","650px")
+//   } else if(width > 1000) {
+//     console.log(width, (width - 800 - 100) + "px")
+//     document.documentElement.style.setProperty("--three-d-cube-size", (width - 800 - 100) + "px")
+//   }
+// }
+
+addEventListener('resize', resizeImg)
+
 var cube = document.querySelector('.cube');
-// var radioGroup = document.querySelector('.radio-group');
 var currentClass = '';
 
-// function changeSide() {
-//   var checkedRadio = radioGroup.querySelector(':checked');
-//   var showClass = 'show-' + checkedRadio.value;
-//   if ( currentClass ) {
-//     cube.classList.remove( currentClass );
-//   }
-//   cube.classList.add( showClass );
-//   currentClass = showClass;
-// }
-// // set initial side
-// changeSide();
+const skills_img_url = [
+  "./src/imgs/colored-svg/react.svg",
+  "./src/imgs/colored-svg/nodejs.svg",
+  "./src/imgs/colored-svg/mongodb.svg",
+  "./src/imgs/colored-svg/postgresql.svg",
+  "./src/imgs/colored-svg/go.svg",
+  "./src/imgs/colored-svg/python.svg",
+  // "./src/imgs/colored-svg/firebase.svg",
+  "./src/imgs/colored-svg/docker.svg",
+  "./src/imgs/colored-svg/kubernetes.svg",
+  "./src/imgs/colored-svg/git.svg",
+]
 
-const sides = ['front', 'bottom',  'back',  'right', 'left', 'top']
+const sides = ['front', 'left',  'back',  'right', 'bottom', 'top']
 var index = 0
-setInterval(() => {
-  console.log(sides[index], index)
-  var showClass = 'show-' + sides[index];
+var count = 0
 
+for(let count = 0; count<sides.length; count++){
+  var currCube = document.querySelector(`#cube_${sides[count]}`)
+  if(currCube){
+    currCube.innerHTML = `
+      <img class="w-full h-full p-5" src = ${skills_img_url[count]} />
+    `
+  }
+}
+
+setInterval(() => {
+  
+  var showClass = 'show-' + sides[index];
+  var currCube = document.querySelector(`#cube_${sides[index]}`)
+  if(currCube){
+    currCube.innerHTML = `
+      <img class="w-full h-full p-5" src = ${skills_img_url[count]} />
+    `
+  }
   if (currentClass) {
     cube.classList.remove(currentClass);
+    cube.classList.remove('opacity-0');
   }
   cube.classList.add(showClass);
+  cube.classList.add('opacity-100');
+
   currentClass = showClass;
 
   index += 1
+  count += 1
   if (index > 5) {
     index = 0
   }
-}, 2000)
+  if (count >= skills_img_url.length){
+    count = 0
+  }
+}, 3000)
 // radioGroup.addEventListener( 'change', changeSide );
 

@@ -11,8 +11,8 @@
 
 <body class="overflow-none">
   <nav id="main-nav-bar"
-    class="w-full fixed top-0 left-0 shadow-md transition-all temp-hide-nav duration-500 opacity-0 flex px-10 py-5 z-50 bg-white">
-    <div class="flex space-x-7 ml-auto text-gray-700 items-center text-lg font-medium">
+    class="w-full hidden fixed top-0 left-0 shadow-md transition-all temp-hide-nav duration-500 flex px-10 py-5 z-50 bg-primary text-base2">
+    <div class="flex space-x-7  border-b border-b-primary items-center text-xl font-medium">
       <a href="/#about-me-section">
         About
       </a>
@@ -28,12 +28,16 @@
     </div>
   </nav>
 
-  <main class="overflow-y-auto overflow-x-hidden">
+  <main class="overflow-y-auto overflow-x-hidden text-primary bg-base">
 
     <!-- *Section         Hero  -->
-    <section id="about-me-section" class="relative bg-y h-[100vh] w-full">
-      <nav id="temp-nav-bar" class="w-full absolute z-50 flex top-0 left-0 justify-around px-10 py-5">
-        <div class="flex space-x-7 ml-auto text-gray-700 items-center text-lg font-medium">
+    <section id="hero-section" class="relative  flex flex-col h-[100vh] w-full">
+      <nav id="temp-nav-bar"
+        class="w-full fixed top-0 left-0 bg-base shadow-md transition-all temp-hide-nav duration-500 opacity-0 flex px-10 py-7 z-50">
+        <div class="text-secondary font-bold border-secondary border-2 rounded-full text-5xl px-5 py-2">
+          S
+        </div>
+        <div class="flex space-x-7 ml-auto items-center text-xl font-medium">
           <a href="/#about-me-section">
             About
           </a>
@@ -43,65 +47,51 @@
           <a href="/#contact-me-section">
             Contact Me
           </a>
-          <a href="/#" class="border-2 border-color-b text-b p-3 rounded-full">
+          <a href="/#" class="p-3 border-2 border-secondary text-secondary">
             Resume
           </a>
         </div>
       </nav>
-
       <!-- <img class="absolute tablet:hidden w-72 -top-32 -left-32" src="./src/imgs/style/blob-1.svg" />
       <img class="absolute tablet:hidden w-72 -bottom-32 -right-32" src="./src/imgs/style/blob-2.svg" /> -->
 
-      <div class="relative flex  items-center justify-center text-white w-full h-full">
-        <div
-          class="w-fit z-20 mr-auto xl:mr-0 temp-hidden text-gray-800 p-10 bg-opacity-50 ml-10xl:ml-0 max-w-[800px] ">
-          <h1 class="text-6xl font-medium text-blue-600">Siddhant Deshmukh</h1>
-          <h5 class="text-xl text-right pr-10">Full Stack Web Developer / Software Engineer</h5>
+      <!-- <div id="top-left-blur-circle" class="absolute w-[30%] aspect-square rounded-[100%] z-[9] bg-secondary2 blur-3xl  -top-[25%] -left-[10%]"></div> -->
+      <!-- <div id="top-left-blur-circle" class="absolute w-[30%] aspect-square rounded-[100%] z-[11] bg-base2 blur-3xl bg-opacity-75 -bottom-[17.5%] -right-[10%]"></div> -->
 
-          <p class="pt-20">
-            Not only passionate about coding but also deeply committed to continuous learning. I thrive in
-            dynamic
-            environments and relish challenges that push my boundaries. What excites me most about software
-            engineering
-            is
-            its power to transform ideas into tangible, innovative solutions. I am eager to contribute my skills,
-            enthusiasm, and dedication to any team or project, aiming to make a meaningful impact through technology.
-          </p>
-        </div>
+
+      <div class="flex  items-center  justify-start text-white w-full xl:w-fit xl:mx-auto space-x-10  h-full">
         <div
-          class="hidden  z-10 tablet:absolute tablet:z-0 tablet:flex  xl:z-0 xl:static xl:flex w-fit right-0 h-[80%] max-h-[800px] items-center temp-hidden">
+          class="z-20  mr-auto  w-full  xl:h-fit xl:w-fit xl:mr-0 temp-hiddenp-10 overflow-visible  ml-10xl:ml-0 max-w-[800px] ">
+          <h5 class="text-xl text-secondary my-10 ml-3">Full Stack developer</h5>
+          <h1 class="text-8xl font-semibold w-fit min-w-fit whitespace-nowrap text-gray-200">Siddhant Deshmukh</h1>
+          <!-- <h1 class="text-9xl font-semibold w-fit text-gray-300"></h1> -->
+          <!-- <h5 class="text-xl text-right pr-1">Full Stack Web Developer / Software Engineer</h5> -->
+
+          <p class="mt-10 text-xl">
+            I am a Full stack developer having expertise in both frontend and backend technologies.
+          </p>
+
+          <div class="flex w-fit mt-20">
+            <a href="#" class="border-2 border-secondary text-secondary p-3 mr-5">Github</a>
+            <a href="#" class="border-2 border-secondary text-secondary p-3 mr-5">LinkedIn</a>
+            <a href="#contact-me-section" class="border-2 border-secondary text-secondary p-3 mr-5">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="absolute w-full h-full z-10 bg-base bg-opacity-40 xl:bg-opacity-30"></div>
+
+        <div
+          class="z-0 absolute opacity-0 right-10 xl:static xl:mr-10 xl:opacity-100 flex  h-full items-center temp-hidden">
           <div class="scene">
-            <div class="cube">
-              <div class="cube__face cube__face--front">front</div>
-              <div class="cube__face cube__face--back">back</div>
-              <div class="cube__face cube__face--right">right</div>
-              <div class="cube__face cube__face--left">left</div>
-              <div class="cube__face cube__face--top">top</div>
-              <div class="cube__face cube__face--bottom">bottom</div>
+            <div class="cube ">
+              <div id="cube_front" class="xl:opacity-100   cube__face cube__face--front">front</div>
+              <div id="cube_back" class="xl:opacity-100   cube__face cube__face--back">back</div>
+              <div id="cube_right" class="xl:opacity-100   cube__face cube__face--right">right</div>
+              <div id="cube_left" class="xl:opacity-100   cube__face cube__face--left">left</div>
+              <div id="cube_top" class="xl:opacity-100   cube__face cube__face--top">top</div>
+              <div id="cube_bottom" class="xl:opacity-100   cube__face cube__face--bottom">bottom</div>
             </div>
           </div>
-
-          <p class="radio-group">
-            <label>
-              <input type="radio" name="rotate-cube-side" value="front" checked /> front
-            </label>
-            <label>
-              <input type="radio" name="rotate-cube-side" value="right" /> right
-            </label>
-            <label>
-              <input type="radio" name="rotate-cube-side" value="back" /> back
-            </label>
-            <label>
-              <input type="radio" name="rotate-cube-side" value="left" /> left
-            </label>
-            <label>
-              <input type="radio" name="rotate-cube-side" value="top" /> top
-            </label>
-            <label>
-              <input type="radio" name="rotate-cube-side" value="bottom" /> bottom
-            </label>
-          </p>
-          
         </div>
       </div>
 
@@ -109,13 +99,14 @@
     </section>
 
     <!-- *Section         About Me                    -->
-    <section id="about-me-section" class=" bg-y  w-full">
-      <div class="flex  items-center justify-center text-white w-full h-full">
-        <div class="w-fit temp-hidden">
-          <div class="text-gray-800 w-auto p-10 bg-opacity-30 max-w-[800px] ">
-            <h2 class="text-2xl lg:text-4xl mt-16 font-bold">About Me</h2>
+    <section id="about-me-section" class="relative min-h-[80vh] h-fit py-32 w-full">
+      <!-- <img class="absolute right-[5%] z-0 bottom-[10%] border-secondary2 border aspect-square h-[75%]" src="./src/imgs/avatar.png"/> -->
+      <div class="flex mb-10 flex-col items-start pl-[10%] space-y-20 justify-center w-full h-full">
+        <div class="w-full  flex items-center space-x-36 temp-hidden h-fit">
+          <div class="w-auto bg-opacity-30 max-w-[800px] ">
+            <h2 class="text-2xl lg:text-4xl font-bold">About Me</h2>
 
-            <p class="">
+            <p class="text-gray-200 text-xl">
               <br />
               Hello, I'm Siddhant Deshmukh, a recent graduate from 2023. I started software developement in second year
               of
@@ -126,53 +117,70 @@
               <br />
               I am not only passionate about coding but also deeply committed to continuous learning. I thrive in
               dynamic
-              environments and relish challenges that push my boundaries. What excites me most about software
-              engineering
-              is
-              its power to transform ideas into tangible, innovative solutions. I am eager to contribute my skills,
-              enthusiasm, and dedication to any team or project, aiming to make a meaningful impact through technology.
+              environments and relish challenges that push my boundaries.
             </p>
-
-            <ul class="flex flex-wrap mt-10 ">
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/react.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/nodejs.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/mongodb.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/postgresql.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/go.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/python.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/firebase.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/docker.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/kubernetes.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/git.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/aws.svg" />
-              </li>
-              <li>
-                <img class="w-20 h-20 rounded-lg bg-white mr-5 mb-2 p-2" src="./src/imgs/google-cloud.svg" />
-              </li>
-            </ul>
+          </div>
+          <div class="max-h-[600px]">
+            Image by 
+            <a href="https://www.freepik.com/free-vector/antigravity-technology-with-elements_4265511.htm#query=3d%20computer&position=1&from_view=search&track=ais">Freepik</a>
+            <img class="h-[600px]" src="./src/imgs/style/desktop.jpg"/>
           </div>
         </div>
+
+        <div class="">
+          <h2 class="text-2xl lg:text-4xl font-bold">Skills</h2>
+          <ul class="flex w-full justify-start mt-5">
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/react.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/nodejs.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/mongodb.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/postgresql.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/go.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/python.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/firebase.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/docker.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/kubernetes.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/git.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/aws.svg" />
+            </li>
+            <li>
+              <img class="w-28 h-28 rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-2 p-2 "
+                src="./src/imgs/google-cloud.svg" />
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
@@ -219,7 +227,7 @@
     </section>
 
     <!-- *Section         Contact Me / Hire Me             -->
-    <section id="contact-me-section" class="h-screen bg-y items-center flex">
+    <section id="contact-me-section" class="h-screen  items-center flex">
       <div class="w-fit p-8 lg:py-16  mx-auto max-w-screen-md border border-white shadow-lg ">
         <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Me
         </h2>
