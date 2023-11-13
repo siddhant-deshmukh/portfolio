@@ -20,14 +20,6 @@ const projects = [
     "tech_used": ["Next.js", "MongoDB", "Azure", "TailwindCSS", "React Query"]
   },
   {
-    "title": "Form App",
-    "img_url": "./src/imgs/project/google-form-clone.gif",
-    "github": "https://github.com/siddhant-deshmukh/form-app-golang-postgres",
-    "url": null,
-    "description": "One can create form, share it and take responses from others. Have a very functional UI, Focus has been given on scalability and secuirty of the application.",
-    "tech_used": ["Go", "PostgreSQL", "Gin", "React", "Redux"]
-  },
-  {
     "title": "Instagram Clone",
     "img_url": "./src/imgs/project/insta-clone.gif",
     "github": "https://github.com/siddhant-deshmukh/firebase-insta",
@@ -44,6 +36,14 @@ const projects = [
     "tech_used": ["JWT", "BcrypthJS", "MERN"]
   },
   {
+    "title": "Form App",
+    "img_url": "./src/imgs/project/google-form-clone.gif",
+    "github": "https://github.com/siddhant-deshmukh/form-app-golang-postgres",
+    "url": null,
+    "description": "One can create form, share it and take responses from others. Have a very functional UI, Focus has been given on scalability and secuirty of the application.",
+    "tech_used": ["Go", "PostgreSQL", "Gin", "React", "Redux"]
+  },
+  {
     "title": "Card Printers",
     "img_url": "./src/imgs/project/card-printers.gif",
     "github": "https://github.com/siddhant-deshmukh/card-printers",
@@ -51,20 +51,43 @@ const projects = [
     "description": "Beautiful, static, responsive website.",
     "tech_used": ["HTML", "CSS"]
   },
-  {
-    "title": "YourHR",
-    "img_url": "",
-    "github": "https://github.com/siddhant-deshmukh/YourHR",
-    "url": null,
-    "description": "Website for HR / companies to take resume and basic information from applicants. Uses AWS S3 to store resumes.",
-    "tech_used": ["AWS-s3", "MERN", "JWT", "BcryptJS"]
-  },
+  // {
+  //   "title": "YourHR",
+  //   "img_url": "",
+  //   "github": "https://github.com/siddhant-deshmukh/YourHR",
+  //   "url": null,
+  //   "description": "Website for HR / companies to take resume and basic information from applicants. Uses AWS S3 to store resumes.",
+  //   "tech_used": ["AWS-s3", "MERN", "JWT", "BcryptJS"]
+  // },
 ]
 
 // ${project.tech_used.slice(0,3).map((tech)=>`<span class="bg-b py-1 px-3 rounded-md">${tech}</span>`).join(" ")}
 // ${(project.img_url)?project.img_url:'./src/imgs/default.png'}
 // ${project.description.split(".").slice(0,-1).map((line)=>`<li class="pl-1">&#x2022; ${line}</li>`).join(" ")}
 const projectsComponents = projects.map((project) => {
+  return `<div class="relative max-w-xl w-auto aspect-[0.9] max-h-[80vh] overflow-hidden">
+    <div class="flex flex-col border border-primary w-full h-full  shadow-md">
+      <!-- hover:scale-105 transition duration-150 ease-in-out -->
+      <div class="absolute flex bottom-0 left-0 text-sm text-base2 space-x-1">
+        ${project.tech_used.slice(0, 3).map((tech) => `<span class="bg-secondary text-base2 font-semibold text-sm py-0.5 px-1">${tech}</span>`).join(" ")}
+      </div>
+      <div class="relative overflow-hidden w-full h-[60%] bg-white">
+        <img class="w-full " src=${(project.img_url) ? project.img_url : './src/imgs/default.png'} />
+      </div>
+      <div class="p-3 h-[40%] text-left">
+        <div class="flex w-full justify-between items-center">
+          <h1 class="text-xl text-gray-200 truncate ... overflow-hidden font-bold">${project.title}</h1>
+          <a href=${project.github} target="_blank">
+            <img class="w-9 h-9  rounded-full" src="./src/imgs/github.svg" />
+          </a>
+        </div>
+        <ul class="space-y-1 text-slate-300 min-h-[30px]">
+          ${project.description.split(".").slice(0, -1).map((line) => `<li class="pl-1 whitespace-normal">&#x2022; ${line}</li>`).join(" ")}
+        </ul>
+      </div>
+    </div>
+  </div>`
+
   return `<div class="flex flex-col max-w-full h-[450px] border-2  rounded-lg shadow-md">
     <div class="relative overflow-hidden w-full h-[50%]">
       <div class="absolute flex bottom-0 right-0 text-sm text-white space-x-1">
@@ -159,20 +182,20 @@ navObserver.observe(projectSection)
 
 var heroSection = document.querySelector('#hero-section')
 
-function resizeImg(){
+function resizeImg() {
   let heroSecSize = heroSection?.getBoundingClientRect()
-  if(heroSecSize){
+  if (heroSecSize) {
     const { width, height } = heroSecSize
-  
+
     // console.log("Here")
-    if(width > 1580){
+    if (width > 1580) {
       // console.log("here")
-      document.documentElement.style.setProperty("--three-d-cube-size","650px")
-    } else if(width > 1280) {
+      document.documentElement.style.setProperty("--three-d-cube-size", "650px")
+    } else if (width > 1280) {
       // console.log(width, (width - 800 - 100) + "px")
       document.documentElement.style.setProperty("--three-d-cube-size", (width - 800 - 100) + "px")
     } else {
-      document.documentElement.style.setProperty("--three-d-cube-size", (width/2) + "px")
+      document.documentElement.style.setProperty("--three-d-cube-size", (width / 2) + "px")
     }
   }
 }
@@ -208,13 +231,13 @@ const skills_img_url = [
   "./src/imgs/colored-svg/git.svg",
 ]
 
-const sides = ['front', 'left',  'back',  'right', 'bottom', 'top']
+const sides = ['front', 'left', 'back', 'right', 'bottom', 'top']
 var index = 0
 var count = 0
 
-for(let count = 0; count<sides.length; count++){
+for (let count = 0; count < sides.length; count++) {
   var currCube = document.querySelector(`#cube_${sides[count]}`)
-  if(currCube){
+  if (currCube) {
     currCube.innerHTML = `
       <img class="w-full h-full p-5" src = ${skills_img_url[count]} />
     `
@@ -222,10 +245,10 @@ for(let count = 0; count<sides.length; count++){
 }
 
 setInterval(() => {
-  
+
   var showClass = 'show-' + sides[index];
   var currCube = document.querySelector(`#cube_${sides[index]}`)
-  if(currCube){
+  if (currCube) {
     currCube.innerHTML = `
       <img class="w-full h-full p-5" src = ${skills_img_url[count]} />
     `
@@ -244,7 +267,7 @@ setInterval(() => {
   if (index > 5) {
     index = 0
   }
-  if (count >= skills_img_url.length){
+  if (count >= skills_img_url.length) {
     count = 0
   }
 }, 3000)

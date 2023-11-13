@@ -121,9 +121,10 @@
             </p>
           </div>
           <div class="max-h-[600px]">
-            Image by 
-            <a href="https://www.freepik.com/free-vector/antigravity-technology-with-elements_4265511.htm#query=3d%20computer&position=1&from_view=search&track=ais">Freepik</a>
-            <img class="h-[600px]" src="./src/imgs/style/desktop.jpg"/>
+            Image by
+            <a
+              href="https://www.freepik.com/free-vector/antigravity-technology-with-elements_4265511.htm#query=3d%20computer&position=1&from_view=search&track=ais">Freepik</a>
+            <img class="h-[600px]" src="./src/imgs/style/desktop.jpg" />
           </div>
         </div>
 
@@ -187,32 +188,60 @@
 
     <!-- *Section         Projects                    -->
     <section id="projects-section" class="p-20">
-      <h1 class="text-4xl font-bold text-gray-700 text-center">
+      <h1 class="text-4xl font-bold text-center">
         <span>
           Projects
         </span>
-        <div class="border-2 w-52 max-w-full mx-auto border-gray-700 mt-2"></div>
+        <div class="border-2 w-52 max-w-full mx-auto mt-2"></div>
       </h1>
 
-      <ul id="projects-list" class="grid grid-cols-3 max-w-7xl mx-auto w-full gap-5">
-        <div class="hidden">
-          <div class="flex flex-col max-h-[450px] border-2  rounded-lg shadow-md">
+      <ul id="projects-list" class="grid grid-cols-2 place-content-center place-items-center mt-10 max-w-7xl mx-auto w-full gap-10">
+        <div class="hidden relative max-w-xl w-auto aspect-[0.9] max-h-[80vh] overflow-hidden">
+          <div class="flex flex-col border border-secondary2 w-full h-full rounded-lg shadow-md">
             <!-- hover:scale-105 transition duration-150 ease-in-out -->
-            <div class="relative overflow-hidden w-full h-full bg-[url('./src/imgs/default.png')]">
-              <div class="absolute flex bottom-0 right-0 text-sm text-white space-x-1">
-                <span class="bg-b py-1 px-3 rounded-md">MERN</span>
-                <span class="bg-b py-1 px-3 rounded-md">Redux</span>
-              </div>
-              <img class="w-full h-fit" src="./src/imgs/project/google-form-clone.gif" />
+            <div class="absolute flex bottom-0 right-0 text-sm text-base2 space-x-1">
+              <span class="bg-secondary py-1 px-3 rounded-md">MERN</span>
+              <span class="bg-secondary py-1 px-3 rounded-md">Redux</span>
             </div>
-            <div class="p-3 text-left h-fit">
+            <div class="relative overflow-hidden w-full h-[60%] bg-[url('./src/imgs/default.png')]">
+              <img class="w-full " src="./src/imgs/project/google-form-clone.gif" />
+            </div>
+            <div class="p-3 h-[40%] text-left">
               <div class="flex w-full justify-between items-center">
-                <h1 class="text-lg truncate ... overflow-hidden font-bold">GoogleForm Clone</h1>
+                <h1 class="text-xl text-gray-200 truncate ... overflow-hidden font-bold">GoogleForm Clone</h1>
                 <a href="#" target="_blank">
-                  <img class="w-6 h-6 bg-black rounded-full" src="./src/imgs/github.svg" />
+                  <img class="w-8 h-8 bg-secondary2 rounded-full" src="./src/imgs/github.svg" />
                 </a>
               </div>
-              <ul class="space-y-1 min-h-[30px]">
+              <ul class="space-y-1 text-slate-300 min-h-[30px]">
+                <li class="pl-1">&#x2022; This is a clone of Google Form.</li>
+                <li class="pl-1 whitespace-normal">&#x2022; One can create form, share it and take responses from
+                  others. </li>
+                <li class="pl-1">&#x2022; Have OAuth based authentication from Google and Github.</li>
+                <li class="pl-1">&#x2022; Have OAuth based authentication from Google and Github.</li>
+                <li class="pl-1">&#x2022; Have OAuth based authentication from Google and Github.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="hidden relative max-w-xl w-auto aspect-[0.9] max-h-[80vh] overflow-hidden">
+          <div class="flex flex-col border border-secondary2 w-full h-full rounded-lg shadow-md">
+            <!-- hover:scale-105 transition duration-150 ease-in-out -->
+            <div class="absolute flex bottom-0 right-0 text-sm text-base2 space-x-1">
+              <span class="bg-secondary py-1 px-3 rounded-md">MERN</span>
+              <span class="bg-secondary py-1 px-3 rounded-md">Redux</span>
+            </div>
+            <div class="relative overflow-hidden w-full h-[60%] bg-[url('./src/imgs/default.png')]">
+              <img class="w-full " src="./src/imgs/project/google-form-clone.gif" />
+            </div>
+            <div class="p-3 h-[40%] text-left">
+              <div class="flex w-full justify-between items-center">
+                <h1 class="text-xl text-gray-200 truncate ... overflow-hidden font-bold">GoogleForm Clone</h1>
+                <a href="#" target="_blank">
+                  <img class="w-8 h-8 bg-secondary2 rounded-full" src="./src/imgs/github.svg" />
+                </a>
+              </div>
+              <ul class="space-y-1 text-slate-300 min-h-[30px]">
                 <li class="pl-1">&#x2022; This is a clone of Google Form.</li>
                 <li class="pl-1 whitespace-normal">&#x2022; One can create form, share it and take responses from
                   others. </li>
@@ -228,34 +257,32 @@
 
     <!-- *Section         Contact Me / Hire Me             -->
     <section id="contact-me-section" class="h-screen  items-center flex">
-      <div class="w-fit p-8 lg:py-16  mx-auto max-w-screen-md border border-white shadow-lg ">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Me
+      <div class="max-w-3xl w-full p-8 lg:py-16  mx-auto  shadow-lg ">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-200">Contact Me
         </h2>
-        <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical
-          issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-300 sm:text-xl">Wanted to Hire Me for any full stack related work?</p>
         <form action="#" class="space-y-8">
           <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your
-              email</label>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-gray-300">Your email</label>
             <input type="email" id="email"
-              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
               placeholder="name@flowbite.com" required>
           </div>
           <div>
-            <label for="subject" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
+            <label for="subject" class="block mb-2 text-sm font-medium text-gray-100 dark:text-gray-300">Subject</label>
             <input type="text" id="subject"
-              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+              class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500"
               placeholder="Let us know how we can help you" required>
           </div>
           <div class="sm:col-span-2">
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-100 dark:text-gray-400">Your
               message</label>
             <textarea id="message" rows="6"
-              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+              class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500"
               placeholder="Leave a comment..."></textarea>
           </div>
           <button type="submit"
-            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send
+            class="py-3 px-5 text-sm font-medium text-center border border-primary text-primary rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Send
             message</button>
         </form>
       </div>
