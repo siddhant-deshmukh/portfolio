@@ -125,15 +125,17 @@ html {
   scroll-padding-top: 96px;
 }
 
-.temp-hidden {
+
+
+/** Animations  */
+.temp-hide {
   opacity: 0;
-  transition: all 1s;
-  /* filter: blur(5px); */
+  transition: all 500ms ;
   transform: translateX(-100%);
 }
-.show {
+.temp-show {
   opacity: 1;
-  transition: all 2s;
+  transition: all 1s ;
   transform: translateX(0);
 }
 
@@ -149,12 +151,37 @@ html {
   transform: translateY(0);
 }
 
+.temp-hide-left {
+  opacity: 0;
+  transition: all 1s;
+  transform: translateX(-100%);
+}
+.show-left {
+  opacity: 1;
+  transition: all 2s;
+  transform: translateX(0);
+}
+.temp-hide-scale {
+  opacity: 0;
+  transition: all 1s;
+  transform: scale(0);
+}
+.show-scale {
+  opacity: 1;
+  transition: all 2s;
+  transform: scale(1);
+}
+
 /* *Specific styling */
 
-#hero-section h1 {
-  /* font-family: 'Tinos', serif; */
-  /* font-family: 'shadow-into-light'; */
-  /* background-image: url('../src/imgs/style/wave-haikei.svg');
-  background-repeat: no-repeat;
-  background-size: cover; */
+
+/** TailwindCSS*/
+
+@layer components {
+  #skills-list  img {
+    @apply w-full max-w-[84px] sm:max-w-none aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2;
+  }
+  #contact-hyperlinks a {
+    @apply border-2 border-secondary text-secondary p-2 mr-3 sm:p-3 sm:mr-5;
+  }
 }

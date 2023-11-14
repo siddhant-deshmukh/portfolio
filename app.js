@@ -65,9 +65,10 @@ const projects = [
 // ${(project.img_url)?project.img_url:'./src/imgs/default.png'}
 // ${project.description.split(".").slice(0,-1).map((line)=>`<li class="pl-1">&#x2022; ${line}</li>`).join(" ")}
 const projectsComponents = projects.map((project) => {
-  return `<div class="max-w-xl w-auto aspect-auto lg:aspect-[0.9]  max-h-none lg:max-h-[80vh] overflow-hidden">
+  return `
+  <div 
+    class="max-w-xl temp-hide-scale w-auto aspect-auto lg:aspect-[0.9]  max-h-none lg:max-h-[80vh] overflow-hidden">
     <div class="relative flex flex-col border border-primary w-full lg:h-full shadow-md">
-      <!-- hover:scale-105 transition duration-150 ease-in-out -->
       <div class="absolute flex  z-30 bottom-0 left-0 text-sm text-base2 space-x-1">
         ${project.tech_used.slice(0, 3).map((tech) => `<span class="bg-secondary text-base2 font-semibold text-xs xl:text-sm py-0.5 px-1">${tech}</span>`).join(" ")}
       </div>
@@ -81,31 +82,10 @@ const projectsComponents = projects.map((project) => {
             <img class="w-9 h-9  rounded-full" src="./src/imgs/github.svg" />
           </a>
         </div>
-        <ul class=" space-y-1 text-slate-300 min-h-[30px]">
+        <ul class="space-y-1 text-slate-300 min-h-[30px]">
           ${project.description.split(".").slice(0, -1).map((line) => `<li class="pl-1 whitespace-normal">&#x2022; ${line}</li>`).join(" ")}
         </ul>
       </div>
-    </div>
-  </div>`
-
-  return `<div class="flex flex-col max-w-full h-[450px] border-2  rounded-lg shadow-md">
-    <div class="relative overflow-hidden w-full h-[50%]">
-      <div class="absolute flex bottom-0 right-0 text-sm text-white space-x-1">
-        ${project.tech_used.slice(0, 3).map((tech) => `<span class="bg-b py-1 px-3 rounded-md">${tech}</span>`).join(" ")}
-      </div>
-      <img class="w-full h-fit" src=${(project.img_url) ? project.img_url : './src/imgs/default.png'} />
-    </div>
-    <div class="p-3 text-left h-[40%]  w-full max-h-full truncate">
-      <div class="flex w-full justify-between items-center">
-        <h1 class="text-lg truncate ... overflow-hidden font-bold">${project.title}</h1>
-        <a href=${project.github} target="_blank">
-          <img class="w-6 h-6 bg-black rounded-full" src="./src/imgs/github.svg"/>
-        </a>
-      </div>
-      
-      <ul class="space-y-1">
-        ${project.description.split(".").slice(0, -1).map((line) => `<li class="pl-1 whitespace-normal">&#x2022; ${line}</li>`).join(" ")}
-      </ul>
     </div>
   </div>`
 })
@@ -134,22 +114,79 @@ projectFilterBtns.forEach((btn) => {
 // -------------------------------------------------------------------------------------------------------------------------------
 //*  -------------------------------------------------    Smooth transitions on scroll  -------------------------------------------
 // --------------------------------------------------------------------------------------------------------------------------------
-const observer = new IntersectionObserver((entries) => {
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     // console.log(entry)
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('show')
+//     }
+//     // else {
+//     //   entry.target.classList.remove('show')
+//     // }
+//   })
+// })
+// const skillCards = document.querySelectorAll('#skills-list  img')
+// for(let skillCard of skillCards){
+//   skillCard.classList.add('temp-hide-scale')
+// }
+
+// const tempHiddenElements = document.querySelectorAll('.temp-hidden')
+// tempHiddenElements.forEach((ele) => observer.observe(ele))
+
+// // console.log(skillCards)
+// skillCards.forEach((ele) => observer.observe(ele))
+
+const observerScale = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     // console.log(entry)
     if (entry.isIntersecting) {
-      entry.target.classList.add('show')
-    }
+      entry.target.classList.add('show-scale')
+      entry.target.classList.remove('temp-hide-scale')
+    } 
     // else {
-    //   entry.target.classList.remove('show')
+    //   entry.target.classList.remove('show-scale')
+    //   entry.target.classList.add('temp-hide-scale')
     // }
   })
 })
 
-const tempHiddenElements = document.querySelectorAll('.temp-hidden')
-tempHiddenElements.forEach((ele) => observer.observe(ele))
+const tempHiddenElementsScale = document.querySelectorAll('.temp-hide-scale')
+tempHiddenElementsScale.forEach((ele) => observerScale.observe(ele))
 
+const inViewAnimeEle = document.querySelectorAll('.temp-hidden')
 
+for(let ele of inViewAnimeEle){
+  for(let child of ele.children){
+    child.classList.add("temp-hide")
+    child.classList.remove("temp-show")
+  }
+}
+
+const elementInViewObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // console.log(entry.target.children.item())
+      var delay = 0
+      for(let child of entry.target.children){
+        // console.log(child)
+        child.classList.remove("temp-hide")
+        child.classList.add("temp-show")
+        child.style.transitionDelay = delay.toString() + "ms"
+        if(delay < 1000){
+          delay += 200
+        }
+      }
+    } 
+    // else {
+    //   for(let child of entry.target.children){
+    //     child.classList.add("temp-hide")
+    //     child.classList.remove("temp-show")
+    //   }
+    // }
+  })
+}, { threshold: 0.5 })
+
+inViewAnimeEle.forEach((ele) => elementInViewObserver.observe(ele))
 
 // -------------------------------------------------------------------------------------------------------------------------------
 //*  -------------------------------------------------    Smooth transitions of navbar  -------------------------------------------
