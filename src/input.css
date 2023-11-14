@@ -51,7 +51,7 @@
   height: var(--three-d-cube-size);
   /* border: 1px solid #CCC; */
   /* border: none; */
-  margin: 20px 20px 20px 0px;
+  /* margin: 20px 20px 20px 20px; */
   perspective: 800px; 
 }
 

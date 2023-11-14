@@ -16,7 +16,7 @@ module.exports = {
 
         primary: '#ffffff',
         secondary: '#66fcf2',
-        base: '#0b0c10',
+        base1: '#0b0c10',
         // base: '#222831',
 
         base2: '#393E46',

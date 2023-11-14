@@ -195,6 +195,8 @@ function resizeImg() {
     } else if (width > 1280) {
       // console.log(width, (width - 800 - 100) + "px")
       document.documentElement.style.setProperty("--three-d-cube-size", (width - 800 - 100) + "px")
+    } else if(width <= 640 ) {
+      document.documentElement.style.setProperty("--three-d-cube-size", (width - 100) + "px")
     } else {
       document.documentElement.style.setProperty("--three-d-cube-size", (width / 2) + "px")
     }
@@ -248,7 +250,7 @@ for (let count = 0; count < sides.length; count++) {
 setInterval(() => {
 
   var showClass = 'show-' + sides[index];
-  var currCube = document.querySelector(`#cube_${sides[index]}`)
+  var currCube = document.querySelector(`.cube_${sides[index]}`)
   if (currCube) {
     currCube.innerHTML = `
       <img class="w-full h-full p-5" src = ${skills_img_url[count]} />

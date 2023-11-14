@@ -28,17 +28,19 @@
     </div>
   </nav>
 
-  <main class="overflow-y-auto overflow-x-hidden text-primary bg-base">
+  <main class="overflow-y-auto overflow-x-hidden text-primary bg-base1">
 
     <!-- *Section         Hero  -->
-    <section id="hero-section" class="relative  flex flex-col h-[100vh] w-full">
+    <section id="hero-section" class="relative  flex items-end sm:items-center h-[100vh] max-h-[1000px] lg:max-h-[1500px]  w-full">
       <nav id="temp-nav-bar"
-        class="w-full fixed top-0 left-0 bg-base shadow-md transition-all temp-hide-nav duration-500 opacity-0 flex py-3 px-5  xl:px-10 xl:py-5 z-50">
-        <div class="text-secondary font-bold border-secondary border-2 rounded-full text-2xl px-3 py-1 xl:text-5xl xl:px-5 xl:py-2">
+        class="w-full fixed bg-opacity-60 top-0 left-0 bg-base1 shadow-md transition-all temp-hide-nav duration-500 opacity-0 flex py-3 px-5  xl:px-10 xl:py-5 z-50">
+        <div
+          class="hidden sm:block text-secondary font-bold border-secondary border-2 rounded-full text-2xl px-3 py-1 xl:text-5xl xl:px-5 xl:py-2">
           S
         </div>
-        <div class="flex space-x-7 ml-auto items-center text-lg xl:text-xl font-medium">
-          <a href="/#about-me-section">
+
+        <div class="flex space-x-7 ml-auto items-center text-sm sm:text-lg xl:text-xl font-medium">
+          <a href="/#about-me-section" class="hidden sm:block">
             About
           </a>
           <a href="/#projects-section">
@@ -58,38 +60,59 @@
       <!-- <div id="top-left-blur-circle" class="absolute w-[30%] aspect-square rounded-[100%] z-[9] bg-secondary2 blur-3xl  -top-[25%] -left-[10%]"></div> -->
       <!-- <div id="top-left-blur-circle" class="absolute w-[30%] aspect-square rounded-[100%] z-[11] bg-base2 blur-3xl bg-opacity-75 -bottom-[17.5%] -right-[10%]"></div> -->
 
+      <!-- <div
+        class="flex sm:hidden z-0 absolute opacity-0 top-[10%] w-full justify-center temp-hidden">
+        <div class="scene mx-auto sm:mx-0">
+          <div class="cube ">
+            <div id="cube_front" class="xl:opacity-100  cube_front    cube__face cube__face--front">front</div>
+            <div id="cube_back" class="xl:opacity-100   cube_back     cube__face cube__face--back">back</div>
+            <div id="cube_right" class="xl:opacity-100  cube_right    cube__face cube__face--right">right</div>
+            <div id="cube_left" class="xl:opacity-100   cube_left     cube__face cube__face--left">left</div>
+            <div id="cube_top" class="xl:opacity-100    cube_top      cube__face cube__face--top">top</div>
+            <div id="cube_bottom" class="xl:opacity-100 cube_bottom   cube__face cube__face--bottom">bottom</div>
+          </div>
+        </div>
+      </div> -->
 
-      <div class="flex  items-center  justify-start text-white w-full xl:w-fit xl:mx-auto space-x-10  h-full">
+
+      <div
+        class="block absolute w-full h-full max-w-full max-h-full z-10 bg-base1 bg-opacity-50 sm:bg-opacity-40 xl:bg-opacity-30">
+      </div>
+
+      <div
+        class="flex mb-[30%] sm:mb-0  px-3 static flex-col sm:flex-row items-center  justify-start text-white w-full xl:w-fit xl:mx-auto space-x-10 h-fit sm:h-full">
         <div
-          class="z-20  mr-auto  w-full  xl:h-fit xl:w-fit xl:mr-0 temp-hiddenp-10 overflow-visible  ml-10 xl:ml-0 max-w-[800px] ">
-          <h5 class="text-xl text-secondary my-10 ml-3">Full Stack developer</h5>
-          <h1 class="text-8xl font-semibold w-fit min-w-fit whitespace-nowrap text-gray-200">Siddhant Deshmukh</h1>
+          class="z-20  mr-auto  w-full  xl:h-fit xl:w-fit xl:mr-0 temp-hiddenp-10 overflow-visible mx-5 sm:ml-10 xl:ml-0 max-w-[800px] ">
+          <h5 class="text-sm sm:text-xl text-secondary ml-1">Full Stack developer</h5>
+          <h1 class="text-5xl sm:text-6xl lg:text-8xl my-4 lg:my-10 font-semibold lg:w-fit lg:whitespace-nowrap text-gray-200">
+            Siddhant Deshmukh
+          </h1>
           <!-- <h1 class="text-9xl font-semibold w-fit text-gray-300"></h1> -->
           <!-- <h5 class="text-xl text-right pr-1">Full Stack Web Developer / Software Engineer</h5> -->
 
-          <p class="mt-10 text-xl">
+          <p class="text-base sm:text-xl pr-3 flex-wrap w-full">
             I am a Full stack developer having expertise in both frontend and backend technologies.
           </p>
 
-          <div class="flex w-fit mt-20">
-            <a href="#" class="border-2 border-secondary text-secondary p-3 mr-5">Github</a>
-            <a href="#" class="border-2 border-secondary text-secondary p-3 mr-5">LinkedIn</a>
-            <a href="#contact-me-section" class="border-2 border-secondary text-secondary p-3 mr-5">Contact Me</a>
+          <div class="flex text-sm sm:text-xl w-fit mt-10 lg:mt-20">
+            <a href="#" class="border-2 border-secondary text-secondary p-2 mr-3 sm:p-3 sm:mr-5">Github</a>
+            <a href="#" class="border-2 border-secondary text-secondary p-2 mr-3 sm:p-3 sm:mr-5">LinkedIn</a>
+            <a href="#contact-me-section"
+              class="border-2 border-secondary text-secondary p-2 mr-3 sm:p-3 sm:mr-5">Contact Me</a>
           </div>
         </div>
 
-        <div class="absolute w-full h-full z-10 bg-base bg-opacity-40 xl:bg-opacity-30"></div>
 
         <div
-          class="z-0 absolute opacity-0 right-10 xl:static xl:mr-10 xl:opacity-100 flex  h-full items-center temp-hidden">
-          <div class="scene">
+          class="flex z-0 absolute opacity-0 right-0 top-[10%] sm:top-0 w-full justify-center sm:w-fit sm:right-10 xl:static xl:mr-10 xl:opacity-100 h-auto sm:h-full items-center temp-hidden">
+          <div class="scene mx-auto sm:mx-0">
             <div class="cube ">
-              <div id="cube_front" class="xl:opacity-100   cube__face cube__face--front">front</div>
-              <div id="cube_back" class="xl:opacity-100   cube__face cube__face--back">back</div>
-              <div id="cube_right" class="xl:opacity-100   cube__face cube__face--right">right</div>
-              <div id="cube_left" class="xl:opacity-100   cube__face cube__face--left">left</div>
-              <div id="cube_top" class="xl:opacity-100   cube__face cube__face--top">top</div>
-              <div id="cube_bottom" class="xl:opacity-100   cube__face cube__face--bottom">bottom</div>
+              <div id="cube_front" class="xl:opacity-100  cube_front    cube__face cube__face--front">front</div>
+              <div id="cube_back" class="xl:opacity-100   cube_back     cube__face cube__face--back">back</div>
+              <div id="cube_right" class="xl:opacity-100  cube_right    cube__face cube__face--right">right</div>
+              <div id="cube_left" class="xl:opacity-100   cube_left     cube__face cube__face--left">left</div>
+              <div id="cube_top" class="xl:opacity-100    cube_top      cube__face cube__face--top">top</div>
+              <div id="cube_bottom" class="xl:opacity-100 cube_bottom   cube__face cube__face--bottom">bottom</div>
             </div>
           </div>
         </div>
@@ -99,9 +122,9 @@
     </section>
 
     <!-- *Section         About Me                    -->
-    <section id="about-me-section" class="relative min-h-[80vh] h-fit py-32 w-full">
+    <section id="about-me-section" class="relative  min-h-[80vh] sm:py-32 w-full">
       <!-- <img class="absolute right-[5%] z-0 bottom-[10%] border-secondary2 border aspect-square h-[75%]" src="./src/imgs/avatar.png"/> -->
-      <div class="flex mb-10 flex-col items-start px-10 xl:px-[10%] space-y-20 justify-center w-full h-full">
+      <div class="flex mb-10 flex-col items-start px-5 sm:px-10 xl:px-[10%] space-y-20 justify-center w-full h-full">
         <div class="w-full  flex items-center space-x-10 lg:space-x-36 temp-hidden h-fit">
           <div class="w-full md:w-[70%] lg:w-auto  bg-opacity-30 lg:max-w-[800px] ">
             <h2 class="text-2xl lg:text-4xl font-bold">About Me</h2>
@@ -128,55 +151,67 @@
           </div>
         </div>
 
-        <div class="w-full">
+        <div class="w-full overflow-clip">
           <h2 class="text-2xl lg:text-4xl font-bold">Skills</h2>
-          <ul class="grid grid-cols-4 place-items-center sm:flex w-full justify-start mt-5 flex-wrap">
+          <ul class="grid grid-cols-4 place-content-stretch justify-center gap-3 sm:flex w-full sm:justify-start mt-5 flex-wrap">
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/react.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/nodejs.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/mongodb.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/postgresql.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/go.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/python.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/firebase.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/docker.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/kubernetes.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/git.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/aws.svg" />
             </li>
             <li>
-              <img class="w-[60px] h-[60px] sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-md shadow-secondary2 mr-5 mb-5 p-2 "
+              <img
+                class="w-full aspect-square sm:w-[75px] sm:h-[75px] lg:w-28 lg:h-28  rounded-lg bg-base2 shadow-none sm:shadow-md shadow-secondary2 mr-0 mb-0 sm:mr-5 sm:mb-5 p-2 "
                 src="./src/imgs/google-cloud.svg" />
             </li>
           </ul>
@@ -188,14 +223,15 @@
 
     <!-- *Section         Projects                    -->
     <section id="projects-section" class="p-10 md:p-20">
-      <h1 class="text-4xl font-bold text-center">
+      <h1 class="text-2xl lg:text-4xl font-bold text-center">
         <span>
           Projects
         </span>
-        <div class="border-2 w-52 max-w-full mx-auto mt-2"></div>
+        <div class="border sm:border-2 w-52 max-w-full mx-auto mt-2"></div>
       </h1>
 
-      <ul id="projects-list" class="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center mt-10 max-w-7xl mx-auto w-full gap-10">
+      <ul id="projects-list"
+        class="grid grid-cols-1 md:grid-cols-2 place-content-center place-items-center mt-10 max-w-7xl mx-auto w-full gap-10">
         <div class="hidden relative max-w-xl w-auto aspect-[0.9] max-h-[80vh] overflow-hidden">
           <div class="flex flex-col border border-secondary2 w-full h-full rounded-lg shadow-md">
             <!-- hover:scale-105 transition duration-150 ease-in-out -->
@@ -258,12 +294,14 @@
     <!-- *Section         Contact Me / Hire Me             -->
     <section id="contact-me-section" class="h-screen  items-center flex">
       <div class="max-w-3xl w-full p-8 lg:py-16  mx-auto  shadow-lg ">
-        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-200">Contact Me
+        <h2 class="mb-4 text-2xl lg:text-4xl tracking-tight font-extrabold text-center text-gray-200">Contact Me
         </h2>
-        <p class="mb-8 lg:mb-16 font-light text-center text-gray-300 sm:text-xl">Wanted to Hire Me for any full stack related work?</p>
+        <p class="mb-8 lg:mb-16 font-light text-center text-gray-300 sm:text-xl">Wanted to Hire Me for any full stack
+          related work?</p>
         <form action="#" class="space-y-8">
           <div>
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-gray-300">Your email</label>
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-100 dark:text-gray-300">Your
+              email</label>
             <input type="email" id="email"
               class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
               placeholder="name@flowbite.com" required>
